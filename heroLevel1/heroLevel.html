@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Level</title>
+    <link rel="shortcut icon" href="assets/trophy-coin.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="heroLevel.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <div class="container position-absolute top-50 start-50 translate-middle">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card rounded-0">
+                    <div class="card-header text-center fs-4">
+                        <div class="icon-top mx-auto d-block" style="max-width: 50px;">
+                            <i class="bi bi-1-square-fill text-success"></i>
+                        </div>
+                        <strong>CLASSIFICADOR DE NÍVEL DE HERÓI</strong>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="inputText" class="form-label">HERO:</label>
+                                        <input type="text" class="form-control form-control-lg rounded-0 required" id="inputTextName" placeholder="Digite seu nome de herói">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="inputText" class="form-label">XP:</label>
+                                        <input type="text" class="form-control form-control-lg rounded-0" id="inputTextXP" placeholder="Digite sua quantidade de experiência">
+                                    </div>
+                                    <div class="d-grid gap-2 col-6 mb-3 mx-auto">
+                                        <button type="button" class="btn btn-success mx-auto rounded-0" id="generateBtn">MOSTRAR NÍVEL</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <div class="alert alert-success mt-3 fs-4 text-center rounded-0" id="resultAlert" style="display: none;">
+                                    O herói de nome <span id="heroNameResult"></span> <br> está no nível de <span id="heroLevelResult"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="heroLevel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
