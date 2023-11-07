@@ -27,12 +27,15 @@
       .header {
         background-color: #181818;
       }
+      a {
+        text-decoration: none;
+      }
     </style>
 
     <!-- MAIN -->
     <div class="header text-white text-center p-5">
-      <h1>LÓGICA DE PROGRAMAÇÃO</h1>
-      <h5>Desafios propostos no bootcamp Potência Tech - Programação do Zero pela DIO</h5>
+      <h1>Logica de Programação - JavaScript</h1>
+      <h5>Desafios propostos no bootcamp <strong>Potência Tech Programação do Zero</strong> pela <a href="https://www.dio.me/">DIO</a></h5>
     </div>
 
     <!-- cards -->
@@ -190,6 +193,95 @@ let heroVictories = 120;
 let heroDefeats = 50;
 
 calcularNivel(heroName, heroVictories, heroDefeats);
+                    </code>
+                  </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-white p-3">
+            <h4>Escrevendo as Classes de Um Jogo</h4>
+            <p>Classe que represente um herói de uma aventura e que possua as propriedades definidas e método com os requisitos definidos.
+            </p>
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn rounded-5" data-bs-toggle="modal" data-bs-target="#exampleModal3" title="Entendendo o desafio">
+                <i class="bi bi-info-circle-fill text-primary"></i>
+              </button>
+              <a class="btn btn-success" href="./gameClasses3/gameClasses.html" role="button" target="_blank" title="Deploy">Acessar &raquo;</a>
+            </div>
+            <!-- Modal info 3 -->
+            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content text-black">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel3">Instruções para entrega</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <strong>O Que deve ser utilizado</strong> <br>
+                    <ul>
+                      <li>Variáveis</li>
+                      <li>Operadores</li>
+                      <li>Laços de repetição</li>
+                      <li>Estruturas de decisões</li>
+                      <li>Funções</li>
+                      <li>Classes e Objetos</li>
+                    </ul>
+                    <br>
+                    <strong>Objetivo</strong> <br>
+                    Crie uma classe generica que represente um herói de uma aventura e que possua as seguintes propriedades: <br>
+                    <em>- nome <br>
+                      - idade <br>
+                      - tipo (ex: guerreiro, mago, monge, ninja)
+                    </em>
+                    <br>
+                    <br>
+                    Além disso, deve ter um método chamado atacar que deve atender os seguientes requisitos: <br>
+                    <em>Exibir a mensagem: "o <strong>{tipo}</strong> atacou usando <strong>{ataque}</strong>" <br>
+                    onde o <strong>{tipo}</strong> deve ser concatenando o tipo que está na propriedade da classe <br>
+                    e no <strong>{ataque}</strong> deve seguir uma descrição diferente conforme o tipo, seguindo a tabela abaixo:
+                    </em>
+                    <br>
+                    <br>
+                    <em>Se Mago -> no ataque exibir (usou magia) <br>
+                    Se Guerreiro -> no ataque exibir (usou espada) <br>
+                    Se Monge -> no ataque exibir (usou artes marciais) <br>
+                    Se Ninja -> no ataque exibir (usou shuriken)<br>
+                    </em>
+
+                    <br>
+                    <strong>Saída</strong> <br>
+                    Ao final deve se exibir uma mensagem: <br>
+                    "O <strong>{tipo}</strong> atacou usando <strong>{ataque}</strong>"
+                  <hr>
+                  <strong>Lógica</strong> <br>
+                  <pre>
+                    <code>
+class Hero {
+  constructor(nome, idade, tipo) {
+    this.nome = nome;
+    this.idade = idade;
+    this.tipo = tipo;
+  }
+
+  atacar() {
+    const tipos = ["Mago", "Guerreiro", "Monge", "Ninja"];
+    const ataques = ["magia", "espada", "artes marciais", "shuriken"];
+    
+    const index = tipos.findIndex(t => t.toLowerCase() === this.tipo.toLowerCase());
+    if (index !== -1) {
+      console.log(`O ${this.tipo} atacou usando ${ataques[index]}`);
+    } else {
+      console.log("Tipo de herói desconhecido");
+    }
+  }
+}
+
+const hero = new Hero("Julie", 23, "padre");
+hero.atacar();
                     </code>
                   </pre>
                   </div>
